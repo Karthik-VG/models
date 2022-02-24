@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction</title>
+</head>
+<body>
+    <form action="{{url_for('linreg')}}" method="POST"></form>
+    <fieldset>
+        <legend>Input values:</legend> 
+        <br> CRIM :
+        <input name="CRIM" type="number" required>
+        <br>
+        <br> ZN :
+        <input name="ZN" type="number" required>
+        <br>
+        <br> INDUS :
+        <input name="INDUS" type="number" required>
+        <br>
+        <br> CHAS :
+        <input name="CHAS" type="number" required>
+        <br>
+        <br> NOX :
+        <input name="NOX" type="number" required>
+        <br>
+        <br> RM :   
+        <input name="RM" type="number" required>
+        <br>
+        <br> AGE :
+        <input name="AGE" type="number" required>
+        <br>
+        <br> DIS :
+        <input name="DIS" type="number" required>
+        <br>
+        <br> RAD :
+        <input name="RAD" type="number" required>
+        <br>
+        <br> TAX :
+        <input name="TAX" type="number" required>
+        <br>
+        <br> PTRATIO :
+        <input name="PTRATIO" type="number" required>
+        <br>
+        <br> B :
+        <input name="B" type="number" required>
+        <br>
+        <br> LSTAT :
+        <input name="LSTAT" type="number" required>
+        <br>
+        <br>
+        <input type="submit">
+    </fieldset>
+</form>
+<br>
+<div class="result" align="center">
+    <br>Predicted Output :
+    {{result}}
+</div>
+
+</body>
+</html>
