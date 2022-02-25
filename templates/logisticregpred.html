@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction</title>
+</head>
+<h1 align="center">AFFAIR PREDICTION</h1>
+<body>
+    <form action="{{url_for('logreg')}}" method="POST">
+    <fieldset>
+        <legend>Input values:</legend> 
+    
+        <br> rate_marriage :
+        <input name="rate_marriage" type="number" required step="any">
+        <br>
+        <br> age :
+        <input name="age" type="number" required step="any">
+        <br>
+        <br> yrs_married :
+        <input name="yrs_married" type="number" required step="any">
+        <br>
+        <br> children :
+        <input name="children" type="number" required step="any">
+        <br> 
+        <br> religious :
+        <input name="religious" type="number" required step="any">
+        <br>
+        <br> educ :   
+        <input name="educ" type="number" required step="any">
+        <br>
+        <br> occupation :
+        <input name="occupation" type="number" required step="any">
+        <br>
+        <br> occupation_husb :
+        <input name="occupation_husb" type="number" required step="any">
+        <br>
+        <br>
+        <input type="submit">
+    </fieldset>
+</form>
+<br>
+<div class="result" align="center">
+    <br>Predicted Output :
+    {{result}}
+</div>
+
+</body>
+</html>
