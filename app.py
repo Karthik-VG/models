@@ -23,7 +23,7 @@ def linreg():
         B=request.form.get("B")
         LSTAT=request.form.get("LSTAT")
         inp={"CRIM":CRIM, "ZN":ZN,"INDUS":INDUS, "CHAS":CHAS,"NOX":NOX, "RM":RM, "AGE":AGE,"DIS" :DIS, "RAD":RAD, "TAX":TAX,"PTRATIO":PTRATIO, "B":B, "LSTAT":LSTAT}
-        resp = Logistic_Regression().predict(inp)
+        resp = Linear_regression().predict(inp)
 
         return render_template("linearregpred.html",result=resp)
 
