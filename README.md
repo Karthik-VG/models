@@ -1,3 +1,3 @@
 # models
 
-This is a work i did for ineuron assignment
+This work is a part of ineuron assignment
