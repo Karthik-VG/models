@@ -19,3 +19,8 @@ class Transform_Data:
         result=(np.array(inp)).astype(np.float64).reshape(1,-1)
         return result
     
+    def dectree(x):
+                    
+        inp= [x["Pclass"],x["Sex"],x["SibSp"],x["Parch"],x["Fare"]]
+        result=(np.array(inp)).reshape(1,-1)
+        return result

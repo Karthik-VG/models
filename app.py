@@ -1,6 +1,7 @@
 from flask import Flask,render_template,request,flash, redirect
 from src.linear_regression.lin_reg import Linear_regression
 from src.logistic_regression.log_reg import Logistic_Regression
+from src.decision_tree.dec_tree import Decision_tree
 
 app=Flask("__name__")
 
@@ -52,6 +53,28 @@ def logreg():
 
         
         
+@app.route("/dectree",methods=["POST","GET"])
+def dectree():
+    if request.method == "POST":
+
+        PassengerId=request.form.get("PassengerId")
+        Pclass=request.form.get("Pclass")
+        Name=request.form.get("Name")
+        Sex=request.form.get("Sex")
+        Age=request.form.get("Age")
+        SibSp=request.form.get("SibSp")
+        Parch=request.form.get("Parch")
+        Ticket=request.form.get("Ticket")
+        Fare=request.form.get("Fare")
+        Cabin=request.form.get("Cabin")
+        Embarked=request.form.get("Embarked")
+        inp={"PassengerId":PassengerId, "Pclass":Pclass,"Name":Name, "Sex":Sex,"Age":Age, "SibSp":SibSp, "Parch":Parch,"Ticket" :Ticket,"Fare":Fare, "Cabin":Cabin,"Embarked" :Embarked}
+        resp = Decision_tree().predict(inp)
+
+        return render_template("decisiontreepred.html",result=resp)
+
+    return render_template("decisiontreepred.html")
+
 
 
 

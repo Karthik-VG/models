@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction</title>
+</head>
+<h1 align="center">TITANIC SURVIVAL PREDICTION</h1>
+<body>
+
+    <form action="{{url_for('dectree')}}" method="POST">
+    <fieldset>
+        <legend>Input values:</legend> 
+        <br> PassengerId :
+        <input name="PassengerId" type="number" required step="any">
+        <br>
+        <br> Pclass :
+        <input name="Pclass" type="number" required step="any">
+        <br>
+        <br> Name :
+        <input name="Name" type="text" required step="any">
+        <br>
+        <br> Sex :
+        <input name="Sex" type="number" required step="any">
+        <br>
+        <br> Age :   
+        <input name="Age" type="number" required step="any">
+        <br>
+        <br> SibSp :
+        <input name="SibSp" type="number" required step="any">
+        <br>
+        <br> Parch :
+        <input name="Parch" type="number" required step="any">
+        <br>
+        <br>  Ticket :
+        <input name="Ticket" type="number" required step="any">
+        <br>
+        <br> Fare :
+        <input name="Fare" type="number" required step="any">
+        <br>
+        <br> Cabin :
+        <input name="Cabin" type="number" required step="any">
+        <br>
+        <br> Embarked :
+        <input name="Embarked" type="number" required step="any">
+        <br>
+        <br>
+        <input type="submit">
+    </fieldset>
+</form>
+<br>
+<div class="result" align="center">
+    <br>Predicted Output :
+    {{result}}
+</div>
+
+</body>
+</html>
